@@ -14,3 +14,6 @@
   font-family: Futura-Bold;
   src: url("assets/fonts/futura/Futura Heavy font.ttf");
 }
+button {
+  cursor: pointer;
+}
