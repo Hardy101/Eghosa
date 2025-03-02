@@ -14,10 +14,10 @@ const NavBar: React.FC = () => {
           </a>
           <ul className="flex gap-4">
             <li>
-              <a href="#">About</a>
+              <button>About</button>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <button>Contact</button>
             </li>
           </ul>
         </div>
