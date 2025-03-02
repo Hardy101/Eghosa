@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --font-futura: Futura;
+  --font-futura-bold: Futura-Bold;
+  --color-grey-1: #8d99ae;
+}
+
+@font-face {
+  font-family: Futura;
+  src: url("assets/fonts/futura/Futura Book font.ttf");
+}
+@font-face {
+  font-family: Futura-Bold;
+  src: url("assets/fonts/futura/Futura Heavy font.ttf");
+}
