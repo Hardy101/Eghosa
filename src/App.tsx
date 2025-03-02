@@ -11,15 +11,17 @@ function App() {
           <p className="text-xl">
             I develop website and apps. Available for work
           </p>
+          <p>
+            <i className="fa-brands fa-square-x-twitter"></i>
+          </p>
         </div>
         <div className="w-2/5 text-lg">
-          <h2 className="text-[#8D99AE] font-futura-bold text-sm">SELECTED PROJECTS</h2>
+          <h2 className="text-[#8D99AE] font-futura-bold text-sm">
+            SELECTED PROJECTS
+          </h2>
           <ul className="mt-6 flex flex-col divide-grey-1 divide-y-1">
             <li>
               <button className="py-2">LiquiDex</button>
-            </li>
-            <li>
-              <button>LiquiDex</button>
             </li>
           </ul>
         </div>
