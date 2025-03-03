@@ -3,9 +3,12 @@
 @theme {
   --font-futura: Futura;
   --font-futura-bold: Futura-Bold;
+  --font-ramaraja: Futura-Bold;
   --color-grey-1: #8d99ae;
   --color-grey-2: #727d73;
   --color-dark-1: #000000;
+  --color-dark-blue: #183153;
+  --color-light-green: #d7fc90;
 }
 
 @font-face {
@@ -16,6 +19,10 @@
   font-family: Futura-Bold;
   src: url("assets/fonts/futura/Futura Heavy font.ttf");
 }
+@font-face {
+  font-family: ramaraja;
+  src: url("assets/fonts/Ramaraja/Ramaraja-Regular.ttf");
+}
 button {
   cursor: pointer;
 }
@@ -25,4 +32,7 @@ button {
 }
 .project-li {
   @apply border-1 rounded-2xl px-2 mx-auto;
+}
+.bs-2 {
+  box-shadow: 0 0.375em 0 #183153;
 }
