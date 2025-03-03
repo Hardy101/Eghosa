@@ -3,7 +3,7 @@ import Logo from "../assets/img/logo.png";
 const NavBar: React.FC = () => {
   return (
     <>
-      <nav className="font-futura">
+      <nav className="font-proxima">
         <div className="px-8 md:px-16 py-4 flex justify-between">
           <a href="#" className="flex gap-1 my-auto">
             <span className="w-6 h-10 my-auto">

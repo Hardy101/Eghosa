@@ -2,6 +2,7 @@ import "./App.css";
 import NavBar from "./components/navbar";
 import Hero from "./components/hero";
 import Liquidex from "./components/liquidex";
+import Carousel from "./components/carousel";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <NavBar />
       <Hero />
       <Liquidex />
+      <Carousel />
     </div>
   );
 }

@@ -1,9 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-futura: Futura;
-  --font-futura-bold: Futura-Bold;
-  --font-ramaraja: Futura-Bold;
+  --font-proxima: proxima;
   --color-grey-1: #8d99ae;
   --color-grey-2: #727d73;
   --color-dark-1: #000000;
@@ -12,16 +10,12 @@
 }
 
 @font-face {
-  font-family: Futura;
-  src: url("assets/fonts/futura/Futura Book font.ttf");
+  font-family: proxima;
+  src: url("assets/fonts/proxima_nova/ProximaNova-Regular.otf");
 }
 @font-face {
-  font-family: Futura-Bold;
-  src: url("assets/fonts/futura/Futura Heavy font.ttf");
-}
-@font-face {
-  font-family: ramaraja;
-  src: url("assets/fonts/Ramaraja/Ramaraja-Regular.ttf");
+  font-family: bodoni-regular;
+  src: url("assets/fonts/Bodoni_Moda/static/BodoniModa_9pt-Regular.ttf");
 }
 button {
   cursor: pointer;
