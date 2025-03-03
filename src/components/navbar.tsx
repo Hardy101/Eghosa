@@ -12,12 +12,17 @@ const NavBar: React.FC = () => {
 
             <span className="my-auto">Eghosa.</span>
           </a>
-          <ul className="flex gap-4">
-            <li>
+          <ul className="flex gap-4 my-auto">
+            <li className="my-auto">
               <button>About</button>
             </li>
-            <li>
+            <li className="my-auto">
               <button>Contact</button>
+            </li>
+            <li className="my-auto ml-8">
+              <button className="px-2 py-1 rounded-md bs-1">
+                <i className="fa-solid fa-sun"></i>
+              </button>
             </li>
           </ul>
         </div>

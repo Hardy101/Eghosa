@@ -1,7 +1,7 @@
 const Hero: React.FC = () => {
   return (
     <section className="font-futura flex gap-16 px-16 py-10">
-      <div className="w-4/5 grid gap-12">
+      <div className="w-4/5 grid gap-8">
         <h1 className="text-9xl font-futura-bold">
           I'm <span className="text-[#450920]">Eghosa Ordia</span>
         </h1>
@@ -9,15 +9,15 @@ const Hero: React.FC = () => {
           I am a web developer turning ideas into clean, sleek modern websites
           and mobile apps — and I’m available for work.
         </p>
-        <p className="text-2xl flex gap-8">
-          <a href="#">
-            <i className="fa-brands fa-square-x-twitter"></i>
+        <p className="text-md flex gap-8">
+          <a href="#" className="py-2 px-3 rounded-md bs-1">
+            <i className="fa-brands fa-x-twitter"></i>
           </a>
-          <a href="#">
+          <a href="#" className="py-2 px-3 rounded-md bs-1">
             <i className="fa-solid fa-envelope"></i>
           </a>
-          <a href="#">
-            <i className="fa-brands fa-square-github"></i>
+          <a href="#" className="py-2 px-3 rounded-md bs-1">
+            <i className="fa-brands fa-github"></i>
           </a>
         </p>
       </div>
@@ -25,13 +25,22 @@ const Hero: React.FC = () => {
         <h2 className="text-[#450920] font-futura-bold">SELECTED PROJECTS</h2>
         <ul className="mt-6 flex flex-col divide-grey-1 divide-y-1">
           <li>
-            <button className="py-2">LiquiDex</button>
+            <button className="w-full py-2 flex justify-between gap-2">
+              <span className="my-auto">LiquiDex</span>
+              <i className="fa-solid fa-arrow-right my-auto text-sm"></i>
+            </button>
           </li>
           <li>
-            <button className="py-2">ABRMS</button>
+            <button className="w-full py-2 flex justify-between gap-2">
+              <span className="my-auto">ABRMS</span>
+              <i className="fa-solid fa-arrow-right my-auto text-sm"></i>
+            </button>
           </li>
           <li>
-            <button className="py-2">DexBotPro</button>
+            <button className="w-full py-2 flex justify-between gap-2">
+              <span className="my-auto">DexBotPro</span>
+              <i className="fa-solid fa-arrow-right my-auto text-sm"></i>
+            </button>
           </li>
         </ul>
       </div>
@@ -39,4 +48,4 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero
+export default Hero;
