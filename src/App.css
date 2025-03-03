@@ -4,6 +4,8 @@
   --font-futura: Futura;
   --font-futura-bold: Futura-Bold;
   --color-grey-1: #8d99ae;
+  --color-grey-2: #727d73;
+  --color-dark-1: #000000;
 }
 
 @font-face {
@@ -20,4 +22,7 @@ button {
 .bs-1 {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 0px 0px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.project-li {
+  @apply border-1 rounded-2xl px-2 mx-auto;
 }
