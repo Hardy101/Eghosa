@@ -1,19 +1,26 @@
-const Liquidex: React.FC = () => {
+interface DivRef {
+  divRef: React.RefObject<HTMLDivElement | null>;
+}
+
+const Liquidex: React.FC<DivRef> = ({ divRef }) => {
   return (
     <>
-      <section className="fixed top-full w-full h-full font-bodoni text-white">
-        <div className="h-full bg-dark-1 px-4 py-8">
-          <div className="heading flex justify-between">
+      <section
+        ref={divRef}
+        className="fixed top-full w-full h-full font-proxima text-white z-10"
+      >
+        <div className="h-full bg-dark-1 px-8 py-16">
+          <p className="text-sm">
+            <span className="text-white">01</span>
+            <span className="text-grey-2">/04</span>
+          </p>
+          <div className="heading flex justify-between mt-6">
             <div className="info w-1/2 grid gap-4">
-              <p className="text-sm">
-                <span className="text-white">01</span>
-                <span className="text-grey-2">/04</span>
-              </p>
-              <h2 className="text-3xl text-white font-bodoni">
+              <h2 className="text-3xl text-white font-proxima">
                 LiquiDex - Cryptocurrency Management & Trading System
               </h2>
-              <div>
-                <ul className="flex gap-4">
+              <div className="mt-8">
+                <ul className="flex gap-8">
                   <li className="flex flex-col gap-1">
                     <span className="text-grey-2">Project</span>
                     <span className="text-sm">LiquiDex</span>
@@ -30,7 +37,7 @@ const Liquidex: React.FC = () => {
               </div>
             </div>
             <div className="tags text-[#727D73] mb-auto">
-              <ul className="flex flex-col gap-3 text-sm font-bodoni">
+              <ul className="flex flex-col gap-3 text-sm font-proxima">
                 <li className="project-li">
                   <span>Artificial Intelligence</span>
                 </li>
