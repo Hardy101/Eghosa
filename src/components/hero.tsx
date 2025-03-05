@@ -11,8 +11,8 @@ const Hero: React.FC = () => {
           I'm Eghosa Ordia.
         </h1>
         <p className="md:text-xl">
-          I am a web developer turning ideas into clean, sleek modern websites
-          and mobile apps — and I’m available for work.
+          I am a full-stack web developer turning ideas into clean, sleek modern websites
+          and web apps — and I’m available for work.
         </p>
         <p className="text-md flex justify-between md:justify-normal gap-8">
           {sm_links.map(({ icon }, index) => (

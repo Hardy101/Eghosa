@@ -1,7 +1,14 @@
-const Liquidex: React.FC = () => {
+interface DivRef {
+  divRef: React.RefObject<HTMLDivElement | null>;
+}
+
+const Liquidex: React.FC<DivRef> = ({ divRef }) => {
   return (
     <>
-      <section className="fixed top-full w-full h-full font-proxima text-white z-10">
+      <section
+        ref={divRef}
+        className="fixed top-full w-full h-full font-proxima text-white z-10"
+      >
         <div className="h-full bg-dark-1 px-8 py-16">
           <p className="text-sm">
             <span className="text-white">01</span>

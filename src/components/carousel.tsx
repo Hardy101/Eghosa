@@ -1,5 +1,4 @@
-import { useState, useEffect, useRef } from "react";
-import gsap from "gsap";
+import Marquee from "react-fast-marquee";
 
 const messages = [
   "Based in Benin City, Nigeria",
@@ -11,12 +10,14 @@ const messages = [
 
 const Carousel = () => {
   return (
-    <div className="absolute bottom-0 w-full py-2 bg-light-green font-proxima">
-      <ul className="flex gap-8 list-disc">
-        {messages.map((msg, index) => (
-          <li key={index}>{msg}</li>
-        ))}
-      </ul>
+    <div className="fixed bottom-0 w-full py-2 bg-light-green font-proxima">
+      <Marquee>
+        <ul className="flex gap-8 list-disc">
+          {messages.map((msg, index) => (
+            <li key={index}>{msg}</li>
+          ))}
+        </ul>
+      </Marquee>
     </div>
   );
 };
