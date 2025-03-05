@@ -7,7 +7,7 @@ const Liquidex: React.FC<DivRef> = ({ divRef }) => {
     <>
       <section
         ref={divRef}
-        className="fixed top-full w-full h-full font-proxima text-white z-10"
+        className="fixed top-full w-full h-full font-proxima text-white z-30"
       >
         <div className="h-full bg-dark-1 px-8 py-16">
           <p className="text-sm">

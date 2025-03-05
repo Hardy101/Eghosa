@@ -12,7 +12,7 @@ function App() {
       <Liquidex divRef={divRef} />
 
       <NavBar />
-      <Hero />
+      <Hero divRef={divRef} />
       <Carousel />
     </div>
   );
