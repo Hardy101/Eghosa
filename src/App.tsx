@@ -10,7 +10,6 @@ function App() {
   return (
     <div className="relative h-screen">
       <Liquidex divRef={divRef} />
-
       <NavBar />
       <Hero divRef={divRef} />
       <Carousel />

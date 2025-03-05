@@ -11,11 +11,11 @@ const Hero: React.FC<DivRef> = ({ divRef }) => {
     { icon: "fa-brands fa-github" },
   ];
   const showProject = () => {
-    gsap.fromTo(
-      divRef.current,
-      { y: "100%" },
-      { y: "0%", duration: 1, ease: "power2.out" }
-    );
+    gsap.to(divRef.current, {
+      y: "-60vh",
+      duration: 1,
+      ease: "power2.out",
+    });
   };
   return (
     <section className="font-proxima flex flex-col md:flex-row gap-16 px-8 md:px-16 py-10">
