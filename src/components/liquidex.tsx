@@ -1,7 +1,7 @@
 const Liquidex: React.FC = () => {
   return (
     <>
-      <section className="fixed top-full w-full h-full font-bodoni text-white">
+      <section className="fixed top-20 w-full h-full font-proxima text-white z-10">
         <div className="h-full bg-dark-1 px-4 py-8">
           <div className="heading flex justify-between">
             <div className="info w-1/2 grid gap-4">
@@ -9,7 +9,7 @@ const Liquidex: React.FC = () => {
                 <span className="text-white">01</span>
                 <span className="text-grey-2">/04</span>
               </p>
-              <h2 className="text-3xl text-white font-bodoni">
+              <h2 className="text-3xl text-white font-proxima">
                 LiquiDex - Cryptocurrency Management & Trading System
               </h2>
               <div>
@@ -30,7 +30,7 @@ const Liquidex: React.FC = () => {
               </div>
             </div>
             <div className="tags text-[#727D73] mb-auto">
-              <ul className="flex flex-col gap-3 text-sm font-bodoni">
+              <ul className="flex flex-col gap-3 text-sm font-proxima">
                 <li className="project-li">
                   <span>Artificial Intelligence</span>
                 </li>
