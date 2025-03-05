@@ -1,4 +1,3 @@
-
 import gsap from "gsap";
 
 interface DivRef {
@@ -12,8 +11,6 @@ const Hero: React.FC<DivRef> = ({ divRef }) => {
     { icon: "fa-brands fa-github" },
   ];
   const showProject = () => {
-    console.log("shey na here we dey");
-
     gsap.fromTo(
       divRef.current,
       { y: "100%" },
