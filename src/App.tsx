@@ -9,8 +9,9 @@ function App() {
     <div className="relative h-screen overflow-hidden">
       <NavBar />
       <Hero />
+      {/* 
       <Liquidex />
-      <Carousel />
+      <Carousel /> */}
     </div>
   );
 }
