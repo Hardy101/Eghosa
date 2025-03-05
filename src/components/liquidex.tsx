@@ -1,7 +1,7 @@
 const Liquidex: React.FC = () => {
   return (
     <>
-      <section className="fixed top-full w-full h-full font-bodoni text-white">
+      <section className="fixed top-20 w-full h-full font-bodoni text-white z-10">
         <div className="h-full bg-dark-1 px-4 py-8">
           <div className="heading flex justify-between">
             <div className="info w-1/2 grid gap-4">
