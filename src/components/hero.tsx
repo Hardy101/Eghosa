@@ -6,15 +6,15 @@ const Hero: React.FC = () => {
   ];
   return (
     <section className="font-proxima flex flex-col md:flex-row gap-16 px-8 md:px-16 py-10">
-      <div className="w-4/5 grid gap-8">
-        <h1 className="text-4xl md:text-8xl font-bold">
+      <div className="text-center md:text-left md:w-4/5 grid gap-8">
+        <h1 className="text-5xl md:text-8xl font-bold">
           I'm Eghosa Ordia.
         </h1>
-        <p className="text-xl">
+        <p className="md:text-xl">
           I am a web developer turning ideas into clean, sleek modern websites
           and mobile apps — and I’m available for work.
         </p>
-        <p className="text-md flex gap-8">
+        <p className="text-md flex justify-between md:justify-normal gap-8">
           {sm_links.map(({ icon }, index) => (
             <a
               key={index}
@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
           ))}
         </p>
       </div>
-      <div className="w-2/5 text-md">
+      <div className="md:w-2/5 text-md">
         <h2 className="text-grey-2 font-proxima">
           SELECTED PROJECTS
         </h2>

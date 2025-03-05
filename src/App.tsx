@@ -6,12 +6,12 @@ import Carousel from "./components/carousel";
 
 function App() {
   return (
-    <div className="relative h-screen overflow-hidden">
+    <div className="relative h-screen">
+      <Liquidex />
+
       <NavBar />
       <Hero />
-      {/* 
-      <Liquidex />
-      <Carousel /> */}
+      <Carousel />
     </div>
   );
 }
