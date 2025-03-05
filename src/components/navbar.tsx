@@ -10,7 +10,7 @@ const NavBar: React.FC = () => {
               <img src={Logo} alt="logo" className="w-full h-full" />
             </span>
 
-            <span className="my-auto">Eghosa.</span>
+            <span className="my-auto font-proxima-bold">Eghosa.</span>
           </a>
           <ul className="flex gap-4 my-auto text-sm">
             <li className="my-auto hidden md:block">
