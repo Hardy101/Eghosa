@@ -2,6 +2,7 @@
 
 @theme {
   --font-proxima: proxima;
+  --font-proxima-bold: proxima-bold;
   --color-grey-1: #8d99ae;
   --color-grey-2: #727d73;
   --color-dark-1: #000000;
@@ -14,8 +15,8 @@
   src: url("assets/fonts/proxima_nova/ProximaNova-Regular.otf");
 }
 @font-face {
-  font-family: bodoni-regular;
-  src: url("assets/fonts/Bodoni_Moda/static/BodoniModa_9pt-Regular.ttf");
+  font-family: proxima-bold;
+  src: url("assets/fonts/proxima_nova/Proxima Nova Alt Bold.otf");
 }
 button {
   cursor: pointer;
