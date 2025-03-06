@@ -10,7 +10,7 @@ const messages = [
 
 const Carousel = () => {
   return (
-    <div className="fixed bottom-0 w-full py-2 bg-light-green font-proxima">
+    <div className="fixed left-0 bottom-0 w-full py-2 bg-light-green font-proxima">
       <Marquee>
         <ul className="px-8 flex gap-8 list-disc">
           {messages.map((msg, index) => (
