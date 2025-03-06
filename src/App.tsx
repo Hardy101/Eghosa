@@ -5,6 +5,7 @@ import NavBar from "./components/navbar";
 import Hero from "./components/hero";
 import Liquidex from "./components/liquidex";
 import Sidebar from "./components/sidebar";
+import Overlay from "./components/overlay";
 
 function App() {
   const divRef = useRef<HTMLDivElement>(null);
@@ -15,6 +16,7 @@ function App() {
         <Hero divRef={divRef} />
 
         <Liquidex divRef={divRef} />
+        <Overlay />
         <Sidebar />
       </div>
     </>
