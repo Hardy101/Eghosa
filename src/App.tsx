@@ -4,15 +4,19 @@ import "./App.css";
 import NavBar from "./components/navbar";
 import Hero from "./components/hero";
 import Liquidex from "./components/liquidex";
+import Sidebar from "./components/sidebar";
 
 function App() {
   const divRef = useRef<HTMLDivElement>(null);
   return (
     <>
-      <NavBar />
-      <Hero divRef={divRef} />
+      <div className="relative">
+        <NavBar />
+        <Hero divRef={divRef} />
 
-      <Liquidex divRef={divRef} />
+        <Liquidex divRef={divRef} />
+        <Sidebar />
+      </div>
     </>
   );
 }
