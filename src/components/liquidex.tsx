@@ -1,13 +1,30 @@
+import gsap from "gsap";
+import { useEffect } from "react";
+
 interface DivRef {
   divRef: React.RefObject<HTMLDivElement | null>;
 }
 
 const Liquidex: React.FC<DivRef> = ({ divRef }) => {
+  // useEffect(() => {
+  //   const tl = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: divRef.current,
+  //       start: "center bottom",
+  //       end: "bottom top",
+  //       scrub: true,
+  //     },
+  //   });
+
+  //   tl.to(divRef.current, {
+  //     y: "50vh",
+  //   });
+  // });
   return (
     <>
       <section
         ref={divRef}
-        className="fixed top-full w-full h-full font-proxima text-white z-30"
+        className="font-proxima text-white"
       >
         <div className="h-full bg-dark-1 px-8 py-16">
           <p className="text-sm">

@@ -9,10 +9,10 @@ function App() {
   const divRef = useRef<HTMLDivElement>(null);
   return (
     <div className="relative h-screen">
-      <Liquidex divRef={divRef} />
       <NavBar />
       <Hero divRef={divRef} />
       <Carousel />
+      <Liquidex divRef={divRef} />
     </div>
   );
 }
