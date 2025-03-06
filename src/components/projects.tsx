@@ -10,7 +10,9 @@ gsap.defaults({ ease: "none", duration: 2 });
 const ProjectWrapper = () => {
   useEffect(() => {
     const tl = gsap.timeline();
-    tl.from("#abrms", { yPercent: 0 });
+    tl.from("#abrms", {
+      yPercent: 100,
+    });
 
     ScrollTrigger.create({
       animation: tl,
@@ -44,7 +46,9 @@ const ProjectWrapper = () => {
               </h2>
               <p>
                 <a
-                  href="https://liquidex-beta.vercel.app/" target="_blank" rel="noreferrer"
+                  href="https://liquidex-beta.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
                   className="text-sm underline text-grey-2 hover:text-white"
                 >
                   liquidex-beta.vercel.app
@@ -52,7 +56,6 @@ const ProjectWrapper = () => {
               </p>
               <div className="text-sm">
                 <ul className="flex gap-8">
-                  
                   <li className="flex flex-col gap-1">
                     <span className="text-grey-2">Role</span>
                     <span>Developer</span>
@@ -102,7 +105,7 @@ const ProjectWrapper = () => {
         </div>
         <div
           id="abrms"
-          className="bg-grey-2 transition-all duration-300 px-8 py-16"
+          className="bg-dark-1 px-8 py-16"
         >
           <p className="text-sm">
             <span className="text-white">02</span>
