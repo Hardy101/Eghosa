@@ -3,29 +3,31 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.defaults({ ease: "none", duration: 2 });
 
 const ProjectWrapper = () => {
   useEffect(() => {
     const tl = gsap.timeline();
-    tl.from("#liquidex", { yPercent: 100 }).from("#abrms", { yPercent: 100 });
+    tl.from("#liquidex", { yPercent: 10 }).from("#abrms", { yPercent: 10 });
 
     ScrollTrigger.create({
       animation: tl,
       trigger: "#projects",
-      start: "top 20%",
-      end: "bottom 80%",
+      start: "top top",
+      end: "bottom bottom",
       scrub: true,
       pin: true,
       anticipatePin: 1,
     });
   }, []);
+
   return (
     <>
       <section
         id="projects"
         className="projects relative text-white font-poppins z-20"
       >
-        <div id="liquidex" className="bg-dark-1 px-8 py-16">
+        <div id="liquidex" className="bg-dark-1 transition-all duration-300 px-8 py-16">
           <p className="text-sm">
             <span className="text-white">01</span>
             <span className="text-grey-2">/04</span>
@@ -67,7 +69,7 @@ const ProjectWrapper = () => {
             </div>
           </div>
         </div>
-        <div id="abrms" className="bg-dark-1 px-8 py-16">
+        <div id="abrms" className="bg-grey-2 transition-all duration-300 px-8 py-16">
           <p className="text-sm">
             <span className="text-white">02</span>
             <span className="text-grey-2">/04</span>
