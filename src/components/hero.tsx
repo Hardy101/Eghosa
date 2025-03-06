@@ -22,7 +22,7 @@ const Hero: React.FC<DivRef> = ({ divRef }) => {
     });
   };
   return (
-    <section className="relative min-h-screen font-proxima flex flex-col md:flex-row gap-24 px-8 md:px-16 py-10">
+    <section className="relative min-h-screen font-helvetica flex flex-col md:flex-row gap-24 px-8 md:px-16 py-10">
       <div className="text-center md:text-left md:w-3/5 grid gap-8 md:mt-10 mb-auto">
         <h1 className="text-5xl md:text-8xl font-bold my-auto">
           I'm Eghosa Ordia.
@@ -44,7 +44,7 @@ const Hero: React.FC<DivRef> = ({ divRef }) => {
         </p>
       </div>
       <div className="md:w-2/5 text-md">
-        <h2 className="text-grey-2 font-proxima">SELECTED PROJECTS</h2>
+        <h2 className="text-grey-2 ">SELECTED PROJECTS</h2>
         <ul className="mt-4 flex flex-col divide-grey-3 divide-y-1">
           <li>
             <button

@@ -3,6 +3,8 @@
 @theme {
   --font-proxima: proxima;
   --font-proxima-bold: proxima-bold;
+  --font-helvetica: helvetica;
+  --font-poppins: poppins-regular;
   --color-grey-1: #8d99ae;
   --color-grey-2: #727d73;
   --color-grey-3: #c4c4c4;
@@ -10,7 +12,14 @@
   --color-dark-blue: #183153;
   --color-light-green: #d7fc90;
 }
-
+@font-face {
+  font-family: poppins-regular;
+  src: url("assets/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: helvetica;
+  src: url("assets/fonts/HalenoirCompact-Regular.otf");
+}
 @font-face {
   font-family: proxima;
   src: url("assets/fonts/proxima_nova/ProximaNova-Regular.otf");
