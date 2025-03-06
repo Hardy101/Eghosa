@@ -5,6 +5,8 @@
   --font-proxima-bold: proxima-bold;
   --font-helvetica: helvetica;
   --font-poppins: poppins-regular;
+  --font-poppins-bold: poppins-bold;
+  --font-poppins-medium: poppins-medium;
   --color-grey-1: #8d99ae;
   --color-grey-2: #727d73;
   --color-grey-3: #c4c4c4;
@@ -15,6 +17,14 @@
 @font-face {
   font-family: poppins-regular;
   src: url("assets/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: poppins-medium;
+  src: url("assets/fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: poppins-bold;
+  src: url("assets/fonts/Poppins-Bold.ttf");
 }
 @font-face {
   font-family: helvetica;

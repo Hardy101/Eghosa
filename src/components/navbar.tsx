@@ -12,7 +12,7 @@ const NavBar: React.FC = () => {
 
             <span className="my-auto text-md">Eghosa.</span>
           </a>
-          <ul className="flex gap-4 my-auto text-sm">
+          <ul className="flex gap-4 my-auto text-xs font-poppins-medium">
             <li className="my-auto hidden md:block">
               <button>About</button>
             </li>

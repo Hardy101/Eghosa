@@ -18,7 +18,7 @@ const Hero: React.FC<DivRef> = ({ divRef }) => {
 
   const showProject = () => {
     gsap.to(divRef.current, {
-      y: "0",
+      y: 0,
     });
   };
   return (
