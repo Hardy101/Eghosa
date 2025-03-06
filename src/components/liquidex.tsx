@@ -22,17 +22,14 @@ const Liquidex: React.FC<DivRef> = ({ divRef }) => {
   // });
   return (
     <>
-      <section
-        ref={divRef}
-        className="font-proxima text-white"
-      >
-        <div className="h-full bg-dark-1 px-8 py-16">
+      <section ref={divRef} className="font-proxima text-white">
+        <div className="bg-dark-1 px-8 py-16">
           <p className="text-sm">
             <span className="text-white">01</span>
             <span className="text-grey-2">/04</span>
           </p>
-          <div className="heading flex justify-between mt-6">
-            <div className="info w-1/2 grid gap-4">
+          <div className="heading flex flex-col gap-y-16 md:flex-row justify-between mt-6">
+            <div className="info md:w-1/2 grid gap-4">
               <h2 className="text-3xl text-white font-proxima">
                 LiquiDex - Cryptocurrency Management & Trading System
               </h2>
@@ -54,14 +51,14 @@ const Liquidex: React.FC<DivRef> = ({ divRef }) => {
               </div>
             </div>
             <div className="tags text-[#727D73] mb-auto">
-              <ul className="flex flex-col gap-3 text-sm font-proxima">
-                <li className="project-li">
+              <ul className="flex flex-row flex-wrap md:flex-col gap-3 text-sm font-proxima">
+                <li className="project-li my-auto">
                   <span>Artificial Intelligence</span>
                 </li>
-                <li className="project-li">
+                <li className="project-li my-auto">
                   <span>Web Development</span>
                 </li>
-                <li className="project-li">
+                <li className="project-li my-auto">
                   <span>Automation</span>
                 </li>
               </ul>
