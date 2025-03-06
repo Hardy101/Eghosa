@@ -8,12 +8,11 @@ import Sidebar from "./components/sidebar";
 import Overlay from "./components/overlay";
 
 function App() {
-  const divRef = useRef<HTMLDivElement>(null);
   return (
     <>
-      <div className="relative bg-gradient-1">
+      <div className="relative bg-gradient-1 py-40">
         <NavBar />
-        <Hero divRef={divRef} />
+        <Hero />
 
         <ProjectWrapper />
         {/* <Overlay />

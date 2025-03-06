@@ -6,11 +6,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface DivRef {
-  divRef: React.RefObject<HTMLDivElement | null>;
-}
-
-const Hero: React.FC<DivRef> = ({ divRef }) => {
+const Hero: React.FC = () => {
   const [width, setWidth] = useState("0");
 
   const sm_links = [
@@ -19,11 +15,6 @@ const Hero: React.FC<DivRef> = ({ divRef }) => {
     { icon: "fa-brands fa-github" },
   ];
 
-  const showProject = () => {
-    gsap.to(divRef.current, {
-      y: 0,
-    });
-  };
   return (
     <section className="relative min-h-screen font-proxima flex flex-col md:flex-row gap-24 px-8 md:px-16 py-10">
       <div className="text-center md:text-left md:w-3/5 grid gap-8 md:mt-10 mb-auto">
@@ -51,10 +42,7 @@ const Hero: React.FC<DivRef> = ({ divRef }) => {
         <ul className="mt-4 flex flex-col divide-grey-3 divide-y-1 font-poppins-medium">
           <li className="relative group">
             <span className="absolute bottom-0 left-0 h-px bg-grey-2 transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-            <button
-              onClick={showProject}
-              className="w-full py-2 flex justify-between gap-2"
-            >
+            <button className="w-full py-2 flex justify-between gap-2">
               <span className="my-auto">LiquiDex</span>
               <i className="fa-solid fa-arrow-right my-auto text-sm -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-in-out"></i>
             </button>
