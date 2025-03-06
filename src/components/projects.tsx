@@ -9,24 +9,24 @@ gsap.defaults({ ease: "none", duration: 2 });
 
 const ProjectWrapper = () => {
   useEffect(() => {
-    ScrollTrigger.create({
+    const trigger = ScrollTrigger.create({
       trigger: "#projects",
       start: "top top",
-      end: "bottom top",
+      end: "+=300px",
+      pinSpacing: false,
       pin: true,
       markers: true,
     });
+
+    return () => trigger.kill();
   }, []);
 
   return (
     <>
-      <section
-        id="projects"
-        className="projects relative text-white font-poppins z-20"
-      >
+      <section id="projects" className="projects text-white font-poppins z-20">
         <div
           id="liquidex"
-          className="relative bg-dark-1 transition-all duration-300 px-8 py-16 z-10"
+          className=" bg-dark-1 transition-all duration-300 px-8 py-16 z-10"
         >
           <p className="text-sm">
             <span className="text-white">01</span>
@@ -96,7 +96,7 @@ const ProjectWrapper = () => {
             </div>
           </div>
         </div>
-        <div id="abrms" className="relative bg-dark-1 px-8 py-16 z-20">
+        <div id="abrms" className="bg-dark-1 px-8 py-16 z-20">
           <p className="text-sm">
             <span className="text-white">02</span>
             <span className="text-grey-2">/04</span>
