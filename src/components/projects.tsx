@@ -2,8 +2,7 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import fastapi from "../assets/icons/FastAPI.svg";
-import django from "../assets/icons/Django.svg";
+import { media } from "../constants/media";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ ease: "none", duration: 2 });
@@ -13,22 +12,9 @@ const ProjectWrapper = () => {
     const trigger = ScrollTrigger.create({
       trigger: ".project",
       start: "top top",
-      // end: "+=300px",
       pinSpacing: false,
       pin: true,
-      markers: true,
     });
-
-    // gsap.to("#abrms", {
-    //   yPercent: -100,
-    //   ease: "none",
-    //   scrollTrigger: {
-    //     trigger: "#projects",
-    //     start: "top top",
-    //     end: "bottom top",
-    //     scrub: true,
-    //   },
-    // });
     return () => trigger.kill();
   }, []);
 
@@ -83,11 +69,19 @@ const ProjectWrapper = () => {
                   </span>
                   <span className="inline-flex items-center gap-2 text-grey-2 text-xs font-poppins-bold">
                     <img
-                      src={fastapi}
+                      src={media.django}
                       alt="fastapi logo"
                       className=" bg-black border border-grey-[#2d2d2d] w-auto h-6 rounded-md p-1"
                     />
                     FastAPI
+                  </span>
+                  <span className="inline-flex items-center gap-2 text-grey-2 text-xs font-poppins-bold">
+                    <img
+                      src={media.tailwind}
+                      alt="Tailwind CSS logo"
+                      className=" bg-black border border-grey-[#2d2d2d] w-auto h-6 rounded-md p-1"
+                    />
+                    Tailwind CSS
                   </span>
                 </p>
               </div>
@@ -107,7 +101,7 @@ const ProjectWrapper = () => {
             </div>
           </div>
         </div>
-        <div id="abrms" className="project relative bg-dark-1 px-8 py-16 z-10">
+        <div id="abrms" className="project relative bg-dark-2 px-8 py-16 z-10">
           <p className="text-sm">
             <span className="text-white">02</span>
             <span className="text-grey-2">/04</span>
@@ -153,11 +147,19 @@ const ProjectWrapper = () => {
                   </span>
                   <span className="inline-flex items-center gap-2 text-grey-2 text-xs font-poppins-bold">
                     <img
-                      src={django}
+                      src={media.django}
                       alt="Django logo"
                       className=" bg-black border border-grey-[#2d2d2d] w-auto h-6 rounded-md p-1"
                     />
                     Django
+                  </span>
+                  <span className="inline-flex items-center gap-2 text-grey-2 text-xs font-poppins-bold">
+                    <img
+                      src={media.tailwind}
+                      alt="Tailwind CSS logo"
+                      className=" bg-black border border-grey-[#2d2d2d] w-auto h-6 rounded-md p-1"
+                    />
+                    Tailwind CSS
                   </span>
                 </p>
               </div>
