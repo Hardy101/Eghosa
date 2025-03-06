@@ -3,6 +3,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 import fastapi from "../assets/icons/FastAPI.svg";
+import django from "../assets/icons/Django.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ ease: "none", duration: 2 });
@@ -106,27 +107,25 @@ const ProjectWrapper = () => {
             </div>
           </div>
         </div>
-        <div
-          id="abrms"
-          className="project relative bg-grey-3 px-8 py-16 z-10"
-        >
+        <div id="abrms" className="project relative bg-dark-1 px-8 py-16 z-10">
           <p className="text-sm">
-            <span className="text-white">01</span>
+            <span className="text-white">02</span>
             <span className="text-grey-2">/04</span>
           </p>
           <div className="heading flex flex-col gap-y-16 md:flex-row justify-between mt-6">
             <div className="info md:w-1/2 grid gap-4">
               <h2 className="text-3xl text-white font-helvetica">
-                LiquiDex - Cryptocurrency Management & Trading System
+                ABRMS - Real Estate Management System for Agents & Landlords in
+                Nigeria
               </h2>
               <p>
                 <a
-                  href="https://liquidex-beta.vercel.app/"
+                  href="https://hardy101.github.io/ABRMS/"
                   target="_blank"
                   rel="noreferrer"
                   className="text-sm underline text-grey-2 hover:text-white"
                 >
-                  liquidex-beta.vercel.app
+                  abrms.vercel.app
                 </a>
               </p>
               <div className="text-sm">
@@ -154,11 +153,11 @@ const ProjectWrapper = () => {
                   </span>
                   <span className="inline-flex items-center gap-2 text-grey-2 text-xs font-poppins-bold">
                     <img
-                      src={fastapi}
-                      alt="fastapi logo"
+                      src={django}
+                      alt="Django logo"
                       className=" bg-black border border-grey-[#2d2d2d] w-auto h-6 rounded-md p-1"
                     />
-                    FastAPI
+                    Django
                   </span>
                 </p>
               </div>
@@ -166,19 +165,18 @@ const ProjectWrapper = () => {
             <div className="tags text-[#727D73] mb-auto">
               <ul className="flex flex-col gap-3">
                 <li className="project-li">
-                  <span>Artificial Intelligence</span>
+                  <span>Design</span>
                 </li>
                 <li className="project-li">
-                  <span>Web Development</span>
+                  <span>Web Design</span>
                 </li>
                 <li className="project-li">
-                  <span>Automation</span>
+                  <span>Real Estate</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-
       </section>
     </>
   );

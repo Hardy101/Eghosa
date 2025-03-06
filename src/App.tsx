@@ -10,7 +10,7 @@ import Overlay from "./components/overlay";
 function App() {
   return (
     <>
-      <div className="relative bg-gradient-1">
+      <div className="relative bg-gradient-1 overflow-x-hidden">
         <NavBar />
         <Hero />
 
