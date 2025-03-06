@@ -89,14 +89,14 @@ const ProjectWrapper = () => {
               </div>
             </div>
             <div className="tags text-[#727D73] mb-auto">
-              <ul className="flex flex-row flex-wrap md:flex-col gap-3">
-                <li className="project-li my-auto">
+              <ul className="flex flex-col gap-3">
+                <li className="project-li">
                   <span>Artificial Intelligence</span>
                 </li>
-                <li className="project-li my-auto">
+                <li className="project-li">
                   <span>Web Development</span>
                 </li>
-                <li className="project-li my-auto">
+                <li className="project-li">
                   <span>Automation</span>
                 </li>
               </ul>
