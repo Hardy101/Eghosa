@@ -3,7 +3,7 @@ import "./App.css";
 
 import NavBar from "./components/navbar";
 import Hero from "./components/hero";
-import Liquidex from "./components/liquidex";
+import ProjectWrapper from "./components/projects";
 import Sidebar from "./components/sidebar";
 import Overlay from "./components/overlay";
 
@@ -15,7 +15,7 @@ function App() {
         <NavBar />
         <Hero divRef={divRef} />
 
-        <Liquidex divRef={divRef} />
+        <ProjectWrapper />
         {/* <Overlay />
         <Sidebar /> */}
       </div>
