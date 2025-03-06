@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import { media } from "../constants/media";
+import { icons } from "../constants/media";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ ease: "none", duration: 2 });
@@ -69,7 +69,7 @@ const ProjectWrapper = () => {
                   </span>
                   <span className="inline-flex items-center gap-2 text-grey-2 text-xs font-poppins-bold">
                     <img
-                      src={media.django}
+                      src={icons.django}
                       alt="fastapi logo"
                       className=" bg-black border border-grey-[#2d2d2d] w-auto h-6 rounded-md p-1"
                     />
@@ -77,7 +77,7 @@ const ProjectWrapper = () => {
                   </span>
                   <span className="inline-flex items-center gap-2 text-grey-2 text-xs font-poppins-bold">
                     <img
-                      src={media.tailwind}
+                      src={icons.tailwind}
                       alt="Tailwind CSS logo"
                       className=" bg-black border border-grey-[#2d2d2d] w-auto h-6 rounded-md p-1"
                     />
@@ -147,7 +147,7 @@ const ProjectWrapper = () => {
                   </span>
                   <span className="inline-flex items-center gap-2 text-grey-2 text-xs font-poppins-bold">
                     <img
-                      src={media.django}
+                      src={icons.django}
                       alt="Django logo"
                       className=" bg-black border border-grey-[#2d2d2d] w-auto h-6 rounded-md p-1"
                     />
@@ -155,7 +155,7 @@ const ProjectWrapper = () => {
                   </span>
                   <span className="inline-flex items-center gap-2 text-grey-2 text-xs font-poppins-bold">
                     <img
-                      src={media.tailwind}
+                      src={icons.tailwind}
                       alt="Tailwind CSS logo"
                       className=" bg-black border border-grey-[#2d2d2d] w-auto h-6 rounded-md p-1"
                     />
