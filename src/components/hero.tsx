@@ -1,5 +1,6 @@
 import Carousel from "./carousel";
 
+import { useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -10,6 +11,8 @@ interface DivRef {
 }
 
 const Hero: React.FC<DivRef> = ({ divRef }) => {
+  const [width, setWidth] = useState("0");
+
   const sm_links = [
     { icon: "fa-brands fa-x-twitter" },
     { icon: "fa-solid fa-envelope" },
@@ -22,7 +25,7 @@ const Hero: React.FC<DivRef> = ({ divRef }) => {
     });
   };
   return (
-    <section className="relative min-h-screen font-helvetica flex flex-col md:flex-row gap-24 px-8 md:px-16 py-10">
+    <section className="relative min-h-screen font-proxima flex flex-col md:flex-row gap-24 px-8 md:px-16 py-10">
       <div className="text-center md:text-left md:w-3/5 grid gap-8 md:mt-10 mb-auto">
         <h1 className="text-5xl md:text-8xl font-bold my-auto">
           I'm Eghosa Ordia.
@@ -45,26 +48,29 @@ const Hero: React.FC<DivRef> = ({ divRef }) => {
       </div>
       <div className="md:w-2/5 text-md">
         <h2 className="text-grey-2 ">SELECTED PROJECTS</h2>
-        <ul className="mt-4 flex flex-col divide-grey-3 divide-y-1">
-          <li>
+        <ul className="mt-4 flex flex-col divide-grey-3 divide-y-1 font-poppins-medium">
+          <li className="relative group">
+            <span className="absolute bottom-0 left-0 h-px bg-grey-2 transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
             <button
               onClick={showProject}
               className="w-full py-2 flex justify-between gap-2"
             >
               <span className="my-auto">LiquiDex</span>
-              <i className="fa-solid fa-arrow-right my-auto text-sm"></i>
+              <i className="fa-solid fa-arrow-right my-auto text-sm -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-in-out"></i>
             </button>
           </li>
-          <li>
+          <li className="relative group">
+            <span className="absolute bottom-0 left-0 h-px bg-grey-2 transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
             <button className="w-full py-2 flex justify-between gap-2">
               <span className="my-auto">ABRMS</span>
-              <i className="fa-solid fa-arrow-right my-auto text-sm"></i>
+              <i className="fa-solid fa-arrow-right my-auto text-sm -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-in-out"></i>
             </button>
           </li>
-          <li>
+          <li className="relative group border-b border-grey-3">
+            <span className="absolute bottom-0 left-0 h-px bg-grey-2 transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
             <button className="w-full py-2 flex justify-between gap-2">
               <span className="my-auto">DexBotPro</span>
-              <i className="fa-solid fa-arrow-right my-auto text-sm"></i>
+              <i className="fa-solid fa-arrow-right my-auto text-sm -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-in-out"></i>
             </button>
           </li>
         </ul>
