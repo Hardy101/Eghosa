@@ -11,13 +11,13 @@ function App() {
   const divRef = useRef<HTMLDivElement>(null);
   return (
     <>
-      <div className="relative">
+      <div className="relative bg-gradient-1">
         <NavBar />
         <Hero divRef={divRef} />
 
         <Liquidex divRef={divRef} />
-        <Overlay />
-        <Sidebar />
+        {/* <Overlay />
+        <Sidebar /> */}
       </div>
     </>
   );

@@ -26,6 +26,14 @@ button {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 0px 0px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
+.bg-gradient-1 {
+  background: rgb(248, 249, 250);
+  background: linear-gradient(
+    90deg,
+    rgba(248, 249, 250, 1) 0%,
+    rgba(241, 241, 241, 1) 100%
+  );
+}
 .project-li {
   @apply border-1 rounded-2xl px-2 mx-auto;
 }
