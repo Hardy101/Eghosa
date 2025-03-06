@@ -1,9 +1,11 @@
 const Sidebar = () => {
   return (
     <aside>
-      <div className="heading flex justify-between">
+      <div className="fixed h-full bg-white heading flex justify-between z-50">
         <span className="inline-block w-4 h-4 my-auto"></span>
-        <button className="my-auto">Close</button>
+        <button className="my-auto border rounded-2xl font-proxima-bold">
+          Close
+        </button>
       </div>
 
       <div className="body">
