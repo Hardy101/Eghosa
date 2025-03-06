@@ -1,14 +1,19 @@
 import Carousel from "./carousel";
 
-import { useState } from "react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
+
+const scrollToSection = (id: string) => {
+  gsap.to(window, {
+    duration: 1,
+    scrollTo: { y: `#${id}` },
+    ease: "power2.inOut",
+  });
+};
 
 const Hero: React.FC = () => {
-  const [width, setWidth] = useState("0");
-
   const sm_links = [
     { icon: "fa-brands fa-x-twitter" },
     { icon: "fa-solid fa-envelope" },
@@ -42,14 +47,20 @@ const Hero: React.FC = () => {
         <ul className="mt-4 flex flex-col divide-grey-3 divide-y-1 font-poppins-medium">
           <li className="relative group">
             <span className="absolute bottom-0 left-0 h-px bg-grey-2 transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-            <button className="w-full py-2 flex justify-between gap-2">
+            <button
+              onClick={() => scrollToSection("liquidex")}
+              className="w-full py-2 flex justify-between gap-2"
+            >
               <span className="my-auto">LiquiDex</span>
               <i className="fa-solid fa-arrow-right my-auto text-sm -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-in-out"></i>
             </button>
           </li>
           <li className="relative group">
             <span className="absolute bottom-0 left-0 h-px bg-grey-2 transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-            <button className="w-full py-2 flex justify-between gap-2">
+            <button
+              onClick={() => scrollToSection("abrms")}
+              className="w-full py-2 flex justify-between gap-2"
+            >
               <span className="my-auto">ABRMS</span>
               <i className="fa-solid fa-arrow-right my-auto text-sm -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-in-out"></i>
             </button>
