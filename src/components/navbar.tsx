@@ -2,7 +2,7 @@ import Logo from "../constants/media";
 import { Dispatch } from "react";
 
 export interface SidebarProps {
-  isSidebarOpen: boolean; 
+  isSidebarOpen: boolean;
   setIsSidebarOpen: Dispatch<React.SetStateAction<boolean>>;
 }
 
@@ -18,24 +18,13 @@ const NavBar: React.FC<SidebarProps> = ({ setIsSidebarOpen }) => {
 
             <span className="my-auto text-md">Eghosa.</span>
           </a>
-          <ul className="flex gap-4 my-auto text-xs font-poppins-medium">
-            <li className="my-auto hidden md:block">
-              <button onClick={(): void => setIsSidebarOpen(true)}>
-                About
-              </button>
-            </li>
-            <li className="my-auto hidden md:block">Contact</li>
-            <li className="my-auto">
-              <button className="hidden md:block px-2 py-1 rounded-md text-sm bs-2 border border-dark-blue">
-                <i className="fa-solid fa-sun"></i>
-              </button>
-              <button
-                onClick={(): void => setIsSidebarOpen(true)}
-                className="block md:hidden px-2 py-1 rounded-md text-sm bs-2 border border-dark-blue"
-              >
-                <i className="fa-solid fa-bars"></i>
-              </button>
-            </li>
+          <ul className="flex gap-4 my-auto text-sm font-poppins-medium">
+            <button
+              className="bs-2 border border-dark-1 rounded-lg px-2 py-1 bg-white"
+              onClick={() => setIsSidebarOpen(true)}
+            >
+              Menu
+            </button>
           </ul>
         </div>
       </nav>

@@ -9,7 +9,25 @@ const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   useEffect(() => {
     if (isSidebarOpen) {
-      gsap.to("#sidebar", { x: 0, duration: 0.8, ease: "power3.out" });
+      const tl = gsap.timeline();
+
+      tl.fromTo(
+        "#sidebar",
+        { x: "100%" },
+        { x: 0, duration: 0.8, ease: "power3.out" }
+      );
+      tl.from(
+        ".sidebar-items",
+        {
+          x: 50,
+          opacity: 0,
+          scale: 0.95,
+          duration: 1,
+          ease: "power3.out",
+          stagger: 0.2,
+        },
+        "-=0.8"
+      );
     } else {
       gsap.to("#sidebar", { x: "100%", duration: 0.8, ease: "power3.in" });
     }
@@ -20,30 +38,36 @@ const Sidebar: React.FC<SidebarProps> = ({
       id="sidebar"
       className={`fixed translate-x-full p-4 md:p-8 w-full md:w-1/2 h-full top-0 right-0 bg-white text-black heading z-50 overflow-y-auto`}
     >
-      <div className=" flex justify-between mb-4">
-        <span className="inline-block w-5 bg-gray-300 h-5 rounded-full my-auto"></span>
-        <button
-          onClick={() => setIsSidebarOpen(false)}
-          className="my-auto border rounded-2xl font-proxima-bold text-sm py-1 px-4"
-        >
-          Close
-        </button>
-      </div>
-
-      <div className="body text-xl grid gap-8 font-poppins">
-        <span className="block font-poppins-medium text-3xl">
-          Hello there 👋
-        </span>
-        <p>
-          My name is <span className="font-poppins-medium">Eghosa Ordia </span>
-          and I am a full-stack web developer with a passion for creating
-          <span className="font-poppins-medium"> meaningful </span>
-          and responsive web applications. I have a strong foundation in both
-          front-end and back-end technologies, though i am more proficient in
-          frontend. I am always looking for opportunities to learn and grow as a
-          developer.
-        </p>
-        <div>
+      <div className="text-xl grid gap-8 font-poppins">
+        <div className="sidebar-items flex justify-between gap-4 mb-4">
+          <span className=" w-5 h-5 bg-gray-300 rounded-full my-auto"></span>
+          <span className="mr-auto grow w-5 bg-grey-3 h-px rounded-full my-auto"></span>
+          <button
+            onClick={() => setIsSidebarOpen(false)}
+            className="my-auto border rounded-2xl font-proxima-bold text-sm py-1 px-4"
+          >
+            Close
+          </button>
+          <button className="px-2 py-1 rounded-md text-sm bs-2 border border-dark-blue">
+            <i className="fa-solid fa-sun"></i>
+          </button>
+        </div>
+        <div className="sidebar-items">
+          <span className="block font-poppins-medium text-3xl">
+            Hello there 👋
+          </span>
+          <p>
+            My name is{" "}
+            <span className="font-poppins-medium">Eghosa Ordia </span>
+            and I am a full-stack web developer with a passion for creating
+            <span className="font-poppins-medium"> meaningful </span>
+            and responsive web applications. I have a strong foundation in both
+            front-end and back-end technologies, though i am more proficient in
+            frontend. I am always looking for opportunities to learn and grow as
+            a developer.
+          </p>
+        </div>
+        <div className="sidebar-items">
           <h3 className="font-poppins-bold mb-2">
             Creating Impactful Projects
           </h3>
@@ -55,7 +79,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             positive impact on society.
           </p>
         </div>
-        <div>
+        <div className="sidebar-items">
           <h3 className="font-poppins-bold mb-2">
             On the hunt for exciting opportunities
           </h3>
@@ -86,6 +110,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           <a href="">Resume</a>
         </p>
       </div>
+      <div className="sidebar-items body "></div>
     </aside>
   );
 };
