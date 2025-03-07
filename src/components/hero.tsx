@@ -25,15 +25,15 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative min-h-screen font-proxima flex flex-col md:flex-row gap-24 px-8 md:px-16 py-10">
-      <div className="text-center md:text-left md:w-3/5 grid gap-8 md:mt-10">
-        <h1 className="text-5xl md:text-8xl font-bold my-auto">
+      <div className="text-center md:text-left md:w-3/5 flex flex-col gap-8 mt-16 md:mt-0">
+        <h1 className="text-5xl md:text-8xl font-bold">
           I'm Eghosa Ordia.
         </h1>
-        <p className="md:text-xl my-auto">
+        <p className="md:text-xl">
           I am a full-stack web developer turning ideas into clean, sleek modern
           websites and web apps — and I’m available for work.
         </p>
-        <p className="text-md flex justify-between md:justify-normal gap-8">
+        <p className="text-md flex justify-around md:justify-normal gap-8">
           {sm_links.map(({ icon, path }, index) => (
             <a
               key={index}
