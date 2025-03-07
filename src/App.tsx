@@ -11,7 +11,11 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
     <>
-      <div className="relative bg-gradient-1 overflow-x-hidden">
+      <div
+        className={`${
+          isSidebarOpen ? "h-screen overflow-y-hidden" : "overflow-auto"
+        } relative bg-gradient-1 overflow-x-hidden`}
+      >
         <NavBar
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}

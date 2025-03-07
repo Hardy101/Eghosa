@@ -31,8 +31,27 @@ const Sidebar: React.FC<SidebarProps> = ({
         </button>
       </div>
 
-      <div className="body text-2xl font-medium text-justify">
-        I am a full-stack web developer turning ideas into clean, sleek modern
+      <div className="body text-2xl ">
+        <span className="block">Hello there 👋</span>
+        <p className="mt-2">
+          My name is <span className="font-poppins-medium">Eghosa Ordia</span>{" "}
+          and I am a full-stack web developer with a passion for creating{" "}
+          <span className="font-poppins-medium">meaningful </span>
+          and responsive web applications. I have a strong foundation in both
+          front-end and back-end technologies, though i am more proficient in
+          frontend. I am always looking for opportunities to learn and grow as a
+          developer.
+        </p>
+        <p className="mt-8">
+          <h3 className="font-bold mb-2">Creating Impactful Projects</h3>
+          <span className="text-grey-2 text-xl">
+            I am passionate about creating web applications that make a
+            difference. Case in point of my projects. I believe that technology
+            can be used to solve some of the world's most pressing issues and I
+            am always looking for opportunities to work on projects that have a
+            positive impact on society.
+          </span>
+        </p>
       </div>
     </aside>
   );
