@@ -1,6 +1,11 @@
-import Logo from "../assets/img/logo.png";
+import Logo from "../constants/media";
+import { Dispatch } from "react";
 
-const NavBar: React.FC = () => {
+export interface SidebarProps {
+  setIsSidebarOpen: Dispatch<React.SetStateAction<boolean>>;
+}
+
+const NavBar: React.FC<SidebarProps> = ({ setIsSidebarOpen }) => {
   return (
     <>
       <nav className="relative font-poppins z-20">
@@ -14,16 +19,19 @@ const NavBar: React.FC = () => {
           </a>
           <ul className="flex gap-4 my-auto text-xs font-poppins-medium">
             <li className="my-auto hidden md:block">
-              <button>About</button>
+              <button onClick={(): void => setIsSidebarOpen(true)}>
+                About
+              </button>
             </li>
-            <li className="my-auto hidden md:block">
-              <button>Contact</button>
-            </li>
+            <li className="my-auto hidden md:block">Contact</li>
             <li className="my-auto">
               <button className="hidden md:block px-2 py-1 rounded-md text-sm bs-2 border border-dark-blue">
                 <i className="fa-solid fa-sun"></i>
               </button>
-              <button className="block md:hidden px-2 py-1 rounded-md text-sm bs-2 border border-dark-blue">
+              <button
+                onClick={(): void => setIsSidebarOpen(true)}
+                className="block md:hidden px-2 py-1 rounded-md text-sm bs-2 border border-dark-blue"
+              >
                 <i className="fa-solid fa-bars"></i>
               </button>
             </li>
