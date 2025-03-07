@@ -10,8 +10,8 @@ const NavBar: React.FC<SidebarProps> = ({ setIsSidebarOpen }) => {
     <>
       <nav className="relative font-poppins z-20">
         <div className="px-4 md:px-16 py-4 flex justify-between">
-          <a href="#" className="flex gap-1 my-auto">
-            <span className="md:w-6 h-auto my-auto rounded-full overflow-hidden">
+          <a href="#" className="flex gap-2 my-auto">
+            <span className="w-6 h-auto my-auto rounded-full overflow-hidden">
               <img
                 src="https://miro.medium.com/v2/resize:fill:72:72/1*bB2uSNQXXCWZPU93kW2IBw.jpeg"
                 alt="face"
@@ -19,7 +19,7 @@ const NavBar: React.FC<SidebarProps> = ({ setIsSidebarOpen }) => {
               />
             </span>
 
-            <span className="my-auto text-md">Eghosa.</span>
+            <span className="my-auto text-sm">Eghosa.</span>
           </a>
           <ul className="flex gap-4 my-auto text-sm font-poppins-medium">
             <button
