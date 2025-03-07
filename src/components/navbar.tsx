@@ -1,4 +1,3 @@
-import Logo from "../constants/media";
 import { Dispatch } from "react";
 
 export interface SidebarProps {
