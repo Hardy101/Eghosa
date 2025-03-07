@@ -2,6 +2,7 @@ import Logo from "../constants/media";
 import { Dispatch } from "react";
 
 export interface SidebarProps {
+  isSidebarOpen: boolean; 
   setIsSidebarOpen: Dispatch<React.SetStateAction<boolean>>;
 }
 

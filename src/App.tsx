@@ -12,15 +12,23 @@ function App() {
   return (
     <>
       <div className="relative bg-gradient-1 overflow-x-hidden">
-        <NavBar setIsSidebarOpen={setIsSidebarOpen} />
+        <NavBar
+          isSidebarOpen={isSidebarOpen}
+          setIsSidebarOpen={setIsSidebarOpen}
+        />
         <Hero />
-
         <ProjectWrapper />
         {isSidebarOpen && (
-          <>
-            <Overlay /> <Sidebar setIsSidebarOpen={setIsSidebarOpen} />
-          </>
+          <Overlay
+            isSidebarOpen={isSidebarOpen}
+            setIsSidebarOpen={setIsSidebarOpen}
+          />
         )}
+
+        <Sidebar
+          isSidebarOpen={isSidebarOpen}
+          setIsSidebarOpen={setIsSidebarOpen}
+        />
       </div>
     </>
   );
