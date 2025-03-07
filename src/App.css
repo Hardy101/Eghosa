@@ -39,6 +39,15 @@
   font-family: proxima-bold;
   src: url("assets/fonts/proxima_nova/Proxima Nova Alt Bold.otf");
 }
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
 button {
   cursor: pointer;
 }

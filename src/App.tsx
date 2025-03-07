@@ -22,12 +22,11 @@ function App() {
         />
         <Hero />
         <ProjectWrapper />
-        {isSidebarOpen && (
-          <Overlay
-            isSidebarOpen={isSidebarOpen}
-            setIsSidebarOpen={setIsSidebarOpen}
-          />
-        )}
+
+        <Overlay
+          isSidebarOpen={isSidebarOpen}
+          setIsSidebarOpen={setIsSidebarOpen}
+        />
 
         <Sidebar
           isSidebarOpen={isSidebarOpen}
