@@ -15,9 +15,12 @@ const scrollToSection = (id: string) => {
 
 const Hero: React.FC = () => {
   const sm_links = [
-    { icon: "fa-brands fa-x-twitter" },
-    { icon: "fa-solid fa-envelope" },
-    { icon: "fa-brands fa-github" },
+    {
+      icon: "fa-brands fa-x-twitter",
+      path: "https://x.com/ordia_codes",
+    },
+    { icon: "fa-solid fa-envelope", path: "mailto:eghordia130@gmail.com" },
+    { icon: "fa-brands fa-github", path: "https://www.github.com/Hardy101" },
   ];
 
   return (
@@ -31,10 +34,12 @@ const Hero: React.FC = () => {
           websites and web apps — and I’m available for work.
         </p>
         <p className="text-md flex justify-between md:justify-normal gap-8">
-          {sm_links.map(({ icon }, index) => (
+          {sm_links.map(({ icon, path }, index) => (
             <a
               key={index}
-              href="#"
+              href={path}
+              target="_blank"
+              rel="noreferrer"
               className="py-2 px-3 rounded-md bs-2 border border-dark-blue my-auto"
             >
               <i className={icon}></i>

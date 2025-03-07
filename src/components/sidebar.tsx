@@ -40,7 +40,13 @@ const Sidebar: React.FC<SidebarProps> = ({
     >
       <div className="text-xl grid gap-8 font-poppins">
         <div className="sidebar-items flex justify-between gap-4 mb-4">
-          <span className=" w-5 h-5 bg-gray-300 rounded-full my-auto"></span>
+          <span className=" w-8 h-8 bg-gray-300 rounded-full overflow-hidden my-auto">
+            <img
+              src="https://miro.medium.com/v2/resize:fill:72:72/1*bB2uSNQXXCWZPU93kW2IBw.jpeg"
+              alt="face"
+              className="grayscale"
+            />
+          </span>
           <span className="mr-auto grow w-5 bg-grey-3 h-px rounded-full my-auto"></span>
           <button
             onClick={() => setIsSidebarOpen(false)}
@@ -48,7 +54,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           >
             Close
           </button>
-          <button className="px-2 py-1 rounded-md text-sm bs-2 border border-dark-blue">
+          <button className="px-2 py-1 rounded-md text-sm bs-2 border border-dark-blue my-auto">
             <i className="fa-solid fa-sun"></i>
           </button>
         </div>
@@ -107,10 +113,12 @@ const Sidebar: React.FC<SidebarProps> = ({
             LinkedIn
           </a>
           <a href="mailto:eghordia130@gmail.com">eghordia130@gmail.com</a>
-          <a href="">Resume</a>
+          <a href="#">Resume</a>
+          <a href="http://github.com/Hardy101" target="_blank" rel="noreferrer">
+            Github
+          </a>
         </p>
       </div>
-      <div className="sidebar-items body "></div>
     </aside>
   );
 };
