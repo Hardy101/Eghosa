@@ -52,19 +52,21 @@ const projects = [
       { text: "FastAPI", icon: icons.fastapi },
       { text: "Tailwind CSS", icon: icons.tailwind },
     ],
-    tags: ["Design", "Web Design", "Anonymous", 'Animation'],
+    tags: ["Design", "Web Design", "Anonymous", "Animation"],
   },
 ];
 
 const ProjectWrapper = () => {
   useEffect(() => {
-    const trigger = ScrollTrigger.create({
-      trigger: ".project",
-      start: "top top",
-      pinSpacing: false,
-      pin: true,
+    gsap.utils.toArray(".project").forEach((project, i) => {
+      const trigger = ScrollTrigger.create({
+        trigger: project,
+        start: "top top",
+        pin: true,
+        pinSpacing: false,
+      });
+      return () => trigger.kill();
     });
-    return () => trigger.kill();
   }, []);
 
   return (
