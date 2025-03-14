@@ -39,6 +39,21 @@ const projects = [
     ],
     tags: ["Design", "Web Design", "Real Estate"],
   },
+  {
+    id: "bullsh-t",
+    title: "Bullshit - Anonymous Website",
+    link: "https://bullsh-t.vercel.app/",
+    link_text: "bullsh-t.vercel.app/",
+    role: "Front-end Developer",
+    date: "2025",
+    about:
+      "Bullsh-t is a website for people to send anonymous messages to their friends, family and acquiantances.",
+    stack: [
+      { text: "FastAPI", icon: icons.fastapi },
+      { text: "Tailwind CSS", icon: icons.tailwind },
+    ],
+    tags: ["Design", "Web Design", "Anonymous", 'Animation'],
+  },
 ];
 
 const ProjectWrapper = () => {

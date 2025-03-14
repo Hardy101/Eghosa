@@ -4,6 +4,7 @@ import "./App.css";
 import NavBar from "./components/navbar";
 import Hero from "./components/hero";
 import ProjectWrapper from "./components/projects";
+import Skills from "./components/skills";
 import Sidebar from "./components/sidebar";
 import Overlay from "./components/overlay";
 
@@ -32,6 +33,7 @@ function App() {
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
         />
+        <Skills />
       </div>
     </>
   );
