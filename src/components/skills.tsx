@@ -1,26 +1,29 @@
 import { icons } from "../constants/media";
 
 const Skills = () => {
+  const skills = [
+    { src: icons.django, alt: "django logo" },
+    { src: icons.fastapi, alt: "fastapi logo" },
+    { src: icons.tailwind, alt: "tailwind logo" },
+    { src: icons.gsap, alt: "gsap logo" },
+  ];
   return (
-    <section>
+    <section className="relative z-30 skills bg-white">
       <div className="px-8 md:px-16 py-10 font-proxima">
-        <h2 className="text-5xl w-2/5">
-          <span className="font-bold">My Professional Background</span>
-          <span className=""> Skills and Accomplishments</span>
+        <h2 className="text-5xl w-2/5 flex gap-4">
+          <span className="text-8xl text-red-500">*</span>
+          <span className="font-bold font-proxima">The Secret Sauce</span>
         </h2>
-        <ul className="grid gap-16 grid-cols-4 mt-16">
-          <li>
-            <img src={icons.django} alt="django logo"  className="w-48 border rounded-4xl px-3 py-8"/>
-          </li>
-          <li>
-            <img src={icons.fastapi} alt="fastapi logo"  className="w-48 border rounded-4xl px-3 py-8"/>
-          </li>
-          <li>
-            <img src={icons.tailwind} alt="tailwind logo" className="w-48 border rounded-4xl px-3 py-8" />
-          </li>
-          <li>
-            <img src={icons.gsap} alt="tailwind logo" className="w-48 border rounded-4xl px-3 py-8" />
-          </li>
+        <ul className="flex justify-around mt-4 text-3xl font-bold">
+          <li>Django</li>
+          <li>FastAPI</li>
+          <li>Tailwindcss</li>
+          <li>Gsap</li>
+          {/* {skills.map(({ src, alt }, idx) => (
+            <li key={idx} className="w-48 h-52 border rounded-[5rem]">
+              <img src={src} alt={alt} className="w-4/5 h-4/5 m-auto" />
+            </li>
+          ))} */}
         </ul>
       </div>
     </section>

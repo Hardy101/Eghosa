@@ -51,6 +51,7 @@ const projects = [
     stack: [
       { text: "FastAPI", icon: icons.fastapi },
       { text: "Tailwind CSS", icon: icons.tailwind },
+      { text: "GSAP", icon: icons.gsap },
     ],
     tags: ["Design", "Web Design", "Anonymous", "Animation"],
   },
@@ -58,15 +59,22 @@ const projects = [
 
 const ProjectWrapper = () => {
   useEffect(() => {
-    gsap.utils.toArray(".project").forEach((project, i) => {
+    const triggers: ScrollTrigger[] = [];
+
+    gsap.utils.toArray<HTMLElement>(".project").forEach((project, i) => {
       const trigger = ScrollTrigger.create({
         trigger: project,
         start: "top top",
+        end: "bottom",
         pin: true,
         pinSpacing: false,
       });
-      return () => trigger.kill();
+      triggers.push(trigger);
     });
+
+    return () => {
+      triggers.forEach((trigger) => trigger.kill());
+    };
   }, []);
 
   return (
@@ -115,7 +123,7 @@ const ProjectWrapper = () => {
                   <p className="project-about">{project.about}</p>
                   <p className="project-stack flex gap-4">
                     <span className="inline-flex items-center gap-2 text-grey-2 text-xs font-poppins-bold">
-                      <i className="fa-brands fa-react my-auto text-sm bg-black border border-grey-[#2d2d2d] rounded-md p-1"></i>
+                      <i className="fa-brands fa-react my-auto text-sm border border-[#2d2d2d] rounded-md p-1"></i>
                       React.js
                     </span>
                     {project.stack.map(({ text, icon }, index) => (
@@ -126,7 +134,7 @@ const ProjectWrapper = () => {
                         <img
                           src={icon}
                           alt={icon}
-                          className=" bg-black border border-grey-[#2d2d2d] w-auto h-6 rounded-md p-1"
+                          className=" bg-black w-auto h-6 rounded-md p-1 border border-[#2d2d2d]"
                         />
                         {text}
                       </span>
