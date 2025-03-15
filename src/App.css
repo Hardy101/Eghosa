@@ -55,6 +55,9 @@ button {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 0px 0px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
+.bs-3 {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 .bg-gradient-1 {
   background: rgb(255, 255, 255);
   background: linear-gradient(
