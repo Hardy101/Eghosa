@@ -61,7 +61,7 @@ const ProjectWrapper = () => {
   useEffect(() => {
     const triggers: ScrollTrigger[] = [];
 
-    gsap.utils.toArray<HTMLElement>(".project").forEach((project, i) => {
+    gsap.utils.toArray<HTMLElement>(".project").forEach((project) => {
       const trigger = ScrollTrigger.create({
         trigger: project,
         start: "top top",
