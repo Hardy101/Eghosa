@@ -1,7 +1,8 @@
 import gsap from "gsap";
+import { useEffect } from "react";
 
 import { SidebarProps } from "./navbar";
-import { useEffect } from "react";
+import { docs } from "../constants/media";
 
 const Sidebar: React.FC<SidebarProps> = ({
   isSidebarOpen,
@@ -110,12 +111,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             LinkedIn
           </a>
           <a href="mailto:eghordia130@gmail.com">eghordia130@gmail.com</a>
-          <a
-            href="#"
-            download={
-              "https://drive.google.com/file/d/1qBOY9DletkJ-n_Gm0IQ7QFVDbYmzOfba/view?usp=drive_link"
-            }
-          >
+          <a href={docs.resume} download={docs.resume}>
             Resume
           </a>
           <a href="http://github.com/Hardy101" target="_blank" rel="noreferrer">
