@@ -90,7 +90,7 @@ const ProjectWrapper = () => {
           >
             <p className="text-sm">
               <span className="text-white">0{index + 1}</span>
-              <span className="text-grey-2">/04</span>
+              <span className="text-grey-2">/0{projects.length}</span>
             </p>
             <div className="heading flex flex-col gap-y-16 md:flex-row justify-between mt-6">
               <div className="info md:w-1/2 grid gap-4">
