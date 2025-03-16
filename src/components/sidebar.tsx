@@ -62,14 +62,14 @@ const Sidebar: React.FC<SidebarProps> = ({
           <span className="block font-poppins-medium text-3xl">
             Hello there 👋
           </span>
-          <p>
-            My name is{" "}
-            <span className="font-poppins-medium">Eghosa Ordia </span>
-            and I am a full-stack web developer with a passion for creating
+          <p className="mt-2">
+            I'm
+            <span className="font-poppins-medium"> Eghosa Ordia, </span>a
+            full-stack web developer with a frontend focus. I’m passionate about
+            building responsive,
             <span className="font-poppins-medium"> meaningful </span>
-            and responsive web applications. I have a strong foundation in both
-            front-end and back-end technologies, though i am more proficient in
-            frontend. I am always looking for opportunities to learn and grow as
+            web applications that provide real value. While frontend development
+            is my strong suit, I'm always eager to expand my skills and grow as
             a developer.
           </p>
         </div>
@@ -78,11 +78,9 @@ const Sidebar: React.FC<SidebarProps> = ({
             Creating Impactful Projects
           </h3>
           <p className="text-grey-2 text-base">
-            I am passionate about creating web applications that make a
-            difference. Case in point of my projects. I believe that technology
-            can be used to solve some of the world's most pressing issues and I
-            am always looking for opportunities to work on projects that have a
-            positive impact on society.
+            From sleek landing pages to full-fledged eCommerce stores, I've got
+            you covered. What I may lack in years of experience, I make up for
+            with enthusiasm, adaptability, and a relentless drive to learn.
           </p>
         </div>
         <div className="sidebar-items">
@@ -96,8 +94,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             </span>
             <span className="mt-4 block text-grey-2 text-base">
               If you have a project that you think I would be a good fit for,
-              feel free to reach out to me. I am always open to new
-              opportunities and I would love to hear from you.
+              feel free to reach out to me. I would love to hear from you.
             </span>
           </p>
         </div>
@@ -113,7 +110,14 @@ const Sidebar: React.FC<SidebarProps> = ({
             LinkedIn
           </a>
           <a href="mailto:eghordia130@gmail.com">eghordia130@gmail.com</a>
-          <a href="#">Resume</a>
+          <a
+            href="#"
+            download={
+              "https://drive.google.com/file/d/1qBOY9DletkJ-n_Gm0IQ7QFVDbYmzOfba/view?usp=drive_link"
+            }
+          >
+            Resume
+          </a>
           <a href="http://github.com/Hardy101" target="_blank" rel="noreferrer">
             Github
           </a>
