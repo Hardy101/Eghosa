@@ -11,6 +11,8 @@ const Skills = () => {
     { txt: "Tailwind", icontype: "svg", src: icons.tailwind },
     { txt: "Fastapi", icontype: "svg", src: icons.fastapi },
     { txt: "Django", icontype: "svg", src: icons.django },
+    { txt: "GitHub", icontype: "flaticon", src: "lni lni-github" },
+    { txt: "Figma", icontype: "flaticon", src: "lni lni-figma" },
   ];
   return (
     <section className="relative z-30 skills bg-white">
