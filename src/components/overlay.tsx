@@ -21,7 +21,7 @@ const Overlay: React.FC<SidebarProps> = ({
         setIsSidebarOpen(false);
       }}
       id="overlay"
-      className="bg-black fixed w-full inset-0 z-40"
+      className="hidden bg-black fixed w-full inset-0 z-40"
     ></div>
   );
 };
