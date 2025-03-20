@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
       );
     });
 
-    return () => ctx.revert(); 
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -85,12 +85,14 @@ const Hero: React.FC = () => {
         </p>
         <ul className="text-md flex justify-around md:justify-normal gap-8">
           {sm_links.map(({ icon, path }, index) => (
-            <li
-              key={index}
-              className="py-2 px-3 rounded-md bs-2 border border-dark-blue my-auto 
+            <li key={index}>
+              <a
+                href={path}
+                target="_blank"
+                rel="noreferrer"
+                className="py-2 px-3 rounded-md bs-2 border border-dark-blue my-auto 
             transition-all duration-300 ease-in-out hover:-translate-y-2 hover:translate-x-2 hover:bg-white hover:text-dark-3"
-            >
-              <a href={path} target="_blank" rel="noreferrer">
+              >
                 <i className={icon}></i>
               </a>
             </li>
