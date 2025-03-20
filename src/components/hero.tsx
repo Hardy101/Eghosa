@@ -16,6 +16,9 @@ const scrollToSection = (id: string) => {
 
 const Hero: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const h2Ref = useRef<HTMLHeadingElement | null>(null);
+  const ulRef = useRef<HTMLUListElement | null>(null);
+
   const sm_links = [
     {
       icon: "fa-brands fa-x-twitter",
@@ -50,6 +53,29 @@ const Hero: React.FC = () => {
         }
       );
     }
+
+    if (h2Ref.current) {
+      gsap.fromTo(
+        h2Ref.current,
+        { opacity: 0, x: -50 },
+        { opacity: 1, x: 0, duration: 1, ease: "power2.out" }
+      );
+    }
+
+    if (ulRef.current) {
+      const listItems = Array.from(ulRef.current.children);
+      gsap.fromTo(
+        listItems,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          ease: "power2.out",
+          stagger: 0.2, 
+        }
+      );
+    }
   }, []);
 
   return (
@@ -66,10 +92,11 @@ const Hero: React.FC = () => {
         <ul className="text-md flex justify-around md:justify-normal gap-8">
           {sm_links.map(({ icon, path }, index) => (
             <li
+              key={index}
               className="py-2 px-3 rounded-md bs-2 border border-dark-blue my-auto 
             transition-all duration-300 ease-in-out hover:-translate-y-2 hover:translate-x-2 hover:bg-white hover:text-dark-3"
             >
-              <a key={index} href={path} target="_blank" rel="noreferrer">
+              <a href={path} target="_blank" rel="noreferrer">
                 <i className={icon}></i>
               </a>
             </li>
@@ -77,8 +104,13 @@ const Hero: React.FC = () => {
         </ul>
       </div>
       <div className="md:w-2/5 text-md">
-        <h2 className="text-grey-2 ">SELECTED PROJECTS</h2>
-        <ul className="mt-4 flex flex-col divide-grey-3 divide-y-1 font-poppins-medium">
+        <h2 ref={h2Ref} className="text-grey-2 ">
+          SELECTED PROJECTS
+        </h2>
+        <ul
+          ref={ulRef}
+          className="mt-4 flex flex-col divide-grey-3 divide-y-1 font-poppins-medium"
+        >
           {projects.map(({ id, txt }, idx) => (
             <li key={idx} className="relative group">
               <span className="absolute bottom-0 left-0 h-px bg-grey-2 transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
