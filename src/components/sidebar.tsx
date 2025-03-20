@@ -1,13 +1,11 @@
 import gsap from "gsap";
 import { useEffect } from "react";
 
-import { SidebarProps } from "./navbar";
+import { useSidebarStore } from "../store/useSidebarStore";
 import { docs } from "../constants/media";
 
-const Sidebar: React.FC<SidebarProps> = ({
-  isSidebarOpen,
-  setIsSidebarOpen,
-}) => {
+const Sidebar: React.FC = () => {
+  const { isSidebarOpen, setIsSidebarOpen } = useSidebarStore();
   useEffect(() => {
     if (isSidebarOpen) {
       const tl = gsap.timeline();

@@ -1,12 +1,11 @@
 import { useLayoutEffect, useState } from "react";
 
-import { SidebarProps } from "./navbar";
+import { useSidebarStore } from "../store/useSidebarStore";
+
 import gsap from "gsap";
 
-const Overlay: React.FC<SidebarProps> = ({
-  isSidebarOpen,
-  setIsSidebarOpen,
-}) => {
+const Overlay: React.FC = ({}) => {
+  const { isSidebarOpen, setIsSidebarOpen } = useSidebarStore();
   const [isMounted, setIsMounted] = useState(false);
 
   useLayoutEffect(() => {

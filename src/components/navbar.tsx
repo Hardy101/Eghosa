@@ -1,11 +1,13 @@
-import { Dispatch } from "react";
+import { useSidebarStore } from "../store/useSidebarStore";
 
-export interface SidebarProps {
-  isSidebarOpen: boolean;
-  setIsSidebarOpen: Dispatch<React.SetStateAction<boolean>>;
-}
+// export interface SidebarProps {
+//   isSidebarOpen: boolean;
+//   setIsSidebarOpen: Dispatch<React.SetStateAction<boolean>>;
+// }
 
-const NavBar: React.FC<SidebarProps> = ({ setIsSidebarOpen }) => {
+const NavBar: React.FC = () => {
+  const { isSidebarOpen, setIsSidebarOpen } = useSidebarStore();
+
   return (
     <>
       <nav className="relative font-poppins z-20">
@@ -23,7 +25,7 @@ const NavBar: React.FC<SidebarProps> = ({ setIsSidebarOpen }) => {
           </a>
           <ul className="flex gap-4 my-auto text-sm font-poppins-medium">
             <button
-              className="bs-2 border border-dark-1 rounded-lg px-2 py-1 bg-white"
+              className={`${isSidebarOpen} bs-2 border border-dark-1 rounded-lg px-2 py-1 bg-white`}
               onClick={() => setIsSidebarOpen(true)}
             >
               Menu
