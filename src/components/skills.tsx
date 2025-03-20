@@ -1,6 +1,15 @@
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { icons } from "../constants/media";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Skills = () => {
+  const listRef = useRef<HTMLUListElement | null>(null);
+  const liRefs = useRef<(HTMLLIElement | null)[]>([]);
+
   const skills = [
     {
       txt: "React",
@@ -14,6 +23,30 @@ const Skills = () => {
     { txt: "GitHub", icontype: "flaticon", src: "lni lni-github" },
     { txt: "Figma", icontype: "flaticon", src: "lni lni-figma" },
   ];
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        liRefs.current,
+        { opacity: 0, y: 50, scale: 0.8 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.6,
+          ease: "back.out(1.7)",
+          stagger: { each: 0.15, from: "random" },
+          scrollTrigger: {
+            trigger: listRef.current, // Trigger animation when this enters view
+            start: "top 80%", // Start animation when 80% of the element is in view
+            toggleActions: "play none none reset", // Play once
+          },
+        }
+      );
+    });
+
+    return () => ctx.revert();
+  }, []);
   return (
     <section className="relative z-30 skills bg-white">
       <div className="px-8 md:px-16 py-16 font-proxima">
@@ -22,10 +55,16 @@ const Skills = () => {
           <span className="font-bold font-proxima">My Secret Sauce</span>
         </h2>
         <p className="text-grey-2 text-xl mt-3">Skills that power my work.</p>
-        <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 mx-auto justify-around mt-8 text-xl font-bold">
+        <ul
+          ref={listRef}
+          className="grid grid-cols-2 md:grid-cols-3 gap-4 mx-auto justify-around mt-8 text-xl font-bold"
+        >
           {skills.map(({ txt, icontype, src }, idx) => (
             <li
               key={idx}
+              ref={(el) => {
+                liRefs.current[idx] = el;
+              }}
               className="bs-2 border border-dark-3 p-4 rounded-md inline-flex items-center gap-2 my-auto"
             >
               {icontype == "flaticon" ? (
@@ -36,10 +75,6 @@ const Skills = () => {
               <span>{txt}</span>
             </li>
           ))}
-          {/* <li>Django</li>
-          <li>FastAPI</li>
-          <li>Tailwindcss</li>
-          <li>Gsap</li> */}
         </ul>
       </div>
     </section>
