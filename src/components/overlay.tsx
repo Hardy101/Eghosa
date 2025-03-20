@@ -9,7 +9,7 @@ const Overlay: React.FC<SidebarProps> = ({
 }) => {
   useEffect(() => {
     if (isSidebarOpen) {
-      gsap.to("#overlay", { opacity: 0.5, duration: 0.8, ease: "power3.out" });
+      gsap.to("#overlay", { opacity: 0.5, duration: 0.8, ease: "power3.out", scale: '100%' });
     } else {
       gsap.to("#overlay", { opacity: 0, duration: 0.8, ease: "power3.in" });
     }
@@ -21,7 +21,7 @@ const Overlay: React.FC<SidebarProps> = ({
         setIsSidebarOpen(false);
       }}
       id="overlay"
-      className="hidden bg-black fixed w-full inset-0 z-40"
+      className="bg-black fixed w-full inset-0 z-40 scale-0"
     ></div>
   );
 };
