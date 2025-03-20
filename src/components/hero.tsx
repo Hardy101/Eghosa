@@ -34,11 +34,11 @@ const Hero: React.FC = () => {
   ];
 
   useEffect(() => {
-    if (containerRef.current) {
-      const elements = Array.from(containerRef.current.children);
-
+    const ctx = gsap.context(() => {
+      const container_els = Array.from(containerRef.current?.children || []);
+      const ulRefs = Array.from(ulRef.current?.children || []);
       gsap.fromTo(
-        elements,
+        container_els,
         { opacity: 0, y: 100, rotate: 8 },
         {
           opacity: 1,
@@ -46,36 +46,30 @@ const Hero: React.FC = () => {
           rotate: 0,
           duration: 1.8,
           ease: "elastic.out(1, 0.6)",
-          stagger: {
-            each: 0.3,
-            from: "start",
-          },
+          stagger: { each: 0.3, from: "start" },
         }
       );
-    }
 
-    if (h2Ref.current) {
       gsap.fromTo(
         h2Ref.current,
         { opacity: 0, x: -50 },
         { opacity: 1, x: 0, duration: 1, ease: "power2.out" }
       );
-    }
 
-    if (ulRef.current) {
-      const listItems = Array.from(ulRef.current.children);
       gsap.fromTo(
-        listItems,
+        ulRefs,
         { opacity: 0, y: 30 },
         {
           opacity: 1,
           y: 0,
           duration: 0.5,
           ease: "power2.out",
-          stagger: 0.2, 
+          stagger: 0.2,
         }
       );
-    }
+    });
+
+    return () => ctx.revert(); 
   }, []);
 
   return (
