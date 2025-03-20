@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 
 import { SidebarProps } from "./navbar";
 import gsap from "gsap";
@@ -7,13 +7,31 @@ const Overlay: React.FC<SidebarProps> = ({
   isSidebarOpen,
   setIsSidebarOpen,
 }) => {
-  useEffect(() => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useLayoutEffect(() => {
     if (isSidebarOpen) {
-      gsap.to("#overlay", { opacity: 0.5, duration: 0.8, ease: "power3.out" });
-    } else {
-      gsap.to("#overlay", { opacity: 0, duration: 0.8, ease: "power3.in" });
+      setIsMounted(true);
+
+      requestAnimationFrame(() => {
+        gsap.to("#overlay", {
+          opacity: 0.5,
+          duration: 0.8,
+          ease: "power3.out",
+        });
+      });
+    } else if (isMounted) {
+      gsap.to("#overlay", {
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.in",
+        onComplete: () => setIsMounted(false),
+      });
     }
   }, [isSidebarOpen]);
+
+  if (!isMounted) return null;
+
   return (
     <div
       style={{ pointerEvents: isSidebarOpen ? "auto" : "none" }}
