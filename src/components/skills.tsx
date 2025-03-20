@@ -37,9 +37,9 @@ const Skills = () => {
           ease: "back.out(1.7)",
           stagger: { each: 0.15, from: "random" },
           scrollTrigger: {
-            trigger: listRef.current, // Trigger animation when this enters view
-            start: "top 80%", // Start animation when 80% of the element is in view
-            toggleActions: "play none none reset", // Play once
+            trigger: listRef.current,
+            start: "top 80%",
+            toggleActions: "play none none reset",
           },
         }
       );
