@@ -47,6 +47,7 @@ const Skills = () => {
 
     return () => ctx.revert();
   }, []);
+
   return (
     <section className="relative z-30 skills bg-white">
       <div className="px-8 md:px-16 py-16 font-proxima">
