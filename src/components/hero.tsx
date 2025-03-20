@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
     { icon: "fa-brands fa-github", path: "https://www.github.com/Hardy101" },
   ];
   const projects = [
-    { id: "liquidex", text: "Liquidex" },
+    { id: "liquidex", txt: "Liquidex" },
     { id: "abrms", txt: "ABRMS" },
     { id: "bullsh-t", txt: "bullsh-t" },
   ];
@@ -79,36 +79,18 @@ const Hero: React.FC = () => {
       <div className="md:w-2/5 text-md">
         <h2 className="text-grey-2 ">SELECTED PROJECTS</h2>
         <ul className="mt-4 flex flex-col divide-grey-3 divide-y-1 font-poppins-medium">
-          <li className="relative group">
-            <span className="absolute bottom-0 left-0 h-px bg-grey-2 transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-            <button
-              onClick={() => scrollToSection("liquidex")}
-              className="w-full py-2 flex justify-between gap-2"
-            >
-              <span className="my-auto">LiquiDex</span>
-              <i className="fa-solid fa-arrow-right my-auto text-sm -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-in-out"></i>
-            </button>
-          </li>
-          <li className="relative group">
-            <span className="absolute bottom-0 left-0 h-px bg-grey-2 transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-            <button
-              onClick={() => scrollToSection("abrms")}
-              className="w-full py-2 flex justify-between gap-2"
-            >
-              <span className="my-auto">ABRMS</span>
-              <i className="fa-solid fa-arrow-right my-auto text-sm -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-in-out"></i>
-            </button>
-          </li>
-          <li className="relative group border-b border-grey-3">
-            <span className="absolute bottom-0 left-0 h-px bg-grey-2 transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-            <button
-              onClick={() => scrollToSection("bullsh-t")}
-              className="w-full py-2 flex justify-between gap-2"
-            >
-              <span className="my-auto">Bullsh-t</span>
-              <i className="fa-solid fa-arrow-right my-auto text-sm -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-in-out"></i>
-            </button>
-          </li>
+          {projects.map(({ id, txt }, idx) => (
+            <li key={idx} className="relative group">
+              <span className="absolute bottom-0 left-0 h-px bg-grey-2 transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
+              <button
+                onClick={() => scrollToSection(`${id}`)}
+                className="w-full py-2 flex justify-between gap-2"
+              >
+                <span className="my-auto">{txt}</span>
+                <i className="fa-solid fa-arrow-right my-auto text-sm -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-in-out"></i>
+              </button>
+            </li>
+          ))}
         </ul>
       </div>
       <Carousel />
